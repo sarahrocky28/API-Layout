@@ -10,28 +10,37 @@ body{
     height: 100dvh;
     display: flex;
     flex-direction: column;
+    background-color: rgb(214, 161, 187);
 }
 
 header{
     display: flex;
     justify-content: space-between;
-    margin: 8px;
+    margin: 6px;
     flex-grow: 1;
 }
 
+section{
+    flex-grow: 2;
+}
 h1{
-    color: rgb(168, 13, 91);;
+    color: rgb(168, 13, 91);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     margin: 10px;
 }
 
+
+#loremh3{
+    color: rgb(168, 13, 91);
+}
+
 main{
     display: flex;
     justify-content: center;
-    gap: 300px;
-    flex-grow: 1;
+    gap: 50px;
+    flex-grow: 2;
 }
 
 .texto4{
@@ -39,36 +48,44 @@ main{
     color: rgb(255, 255, 255);
     text-align: center;
     border-radius: 5px;
-    width: 230px;
+    width: 350px;
     padding: 5px;
-    margin: 15px;
+    margin: 39px;
     justify-content: center;
     align-items: center;
+    display: flex;
+
+
 }
 
 img{
-    margin: 18px;
+   
     border-radius: 10px;
+    border: 1px solid rgb(168, 13, 91);
 }
 
 .botao{
-    margin: 15px;
     width: 50px;
-    padding:3px;
+    align-items: center;
 }
 
 input{
     border-radius: 5px;
+    background-color: rgb(236, 204, 220);
+    border: 1px solid rgb(168, 13, 91);
 }
 
 button{
     border-radius: 5px;
     padding: 2px;
+    background-color: rgb(168, 13, 91);
+    color: aliceblue;
+    border: 1px solid aliceblue;
 }
 
-#botao1{
-    margin: 40px 20px 0 15px;
-}
-#botao2{
-margin: 40px 0px 0 105px;
+#botao{
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    margin-top: 10px;
 }
