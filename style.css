@@ -10,50 +10,59 @@ body{
     height: 100dvh;
     display: flex;
     flex-direction: column;
-    background-color: rgb(214, 161, 187);
+    background-color: rgb(176, 214, 221);
 }
 
 header{
     display: flex;
     justify-content: space-between;
     margin: 6px;
-    flex-grow: 1;
+    
 }
 
 section{
     flex-grow: 2;
 }
 h1{
-    color: rgb(168, 13, 91);
+    color: rgb(168, 13, 13);
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    margin: 10px;
+    margin: 30px;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 #loremh3{
-    color: rgb(168, 13, 91);
+    color: rgb(176, 214, 221);
+    background-color: rgb(168, 13, 13);
+    padding: 7px 4px;
+    margin: 6px 6px;
+    border-radius: 4px;
 }
 
 main{
     display: flex;
     justify-content: center;
-    gap: 50px;
-    flex-grow: 2;
+    gap: 100px;
+    flex-grow: 1;
 }
 
 .texto4{
-    background-color: rgb(168, 13, 91);
+    background-color: rgb(168, 13, 13);
     color: rgb(255, 255, 255);
     text-align: center;
     border-radius: 5px;
     width: 350px;
     padding: 5px;
-    margin: 39px;
+    margin: 0px 0px 110px 15px;
     justify-content: center;
     align-items: center;
     display: flex;
+    
 
 
 }
@@ -61,24 +70,26 @@ main{
 img{
    
     border-radius: 10px;
-    border: 1px solid rgb(168, 13, 91);
+    border: 1px solid rgb(168, 13, 13);
 }
 
 .botao{
-    width: 50px;
+    width: 80px;
     align-items: center;
 }
 
 input{
     border-radius: 5px;
-    background-color: rgb(236, 204, 220);
-    border: 1px solid rgb(168, 13, 91);
+    background-color: rgb(176, 214, 221);
+    border: 1px solid rgb(168, 13, 13);
+    padding: 7px;
+    margin: 6px 6px;
 }
 
 button{
     border-radius: 5px;
-    padding: 2px;
-    background-color: rgb(168, 13, 91);
+    padding: 7px;
+    background-color: rgb(168, 13, 13);
     color: aliceblue;
     border: 1px solid aliceblue;
 }
@@ -86,6 +97,7 @@ button{
 #botao{
     display: flex;
     justify-content: center;
-    gap: 250px;
+    gap: 200px;
     margin-top: 10px;
+    padding: 15px 10px;
 }
