@@ -17,3 +17,15 @@ async function buscarProduto(id) {
 }
 
 buscarProduto(1);
+
+//Criando um jeito de fazer a pesquisa pelo id na barra de pesquisa
+
+const btnPesquisa = document.querySelector("#btnPesquisa")
+let inputPesquisa = document.querySelector("#inputPequisa")
+
+btnPesquisa.addEventListener("click", () => {
+    const id = inputPesquisa.value.trim().replace(/\s+/g, " ");
+    if (id) {
+        buscarProduto(id);
+    }
+});
