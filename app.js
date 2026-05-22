@@ -1,20 +1,19 @@
-// fetch('https://dummyjson.com/products')
-//     .then(res => res.json())
-//     .then(console.log);
-
-let idAtual = 1;
-
-async function buscarProdutos(id) {
+async function buscarProduto(id) {
     try {
         const response = await fetch(`https://dummyjson.com/products/${id}`);
-
-        if (!response.ok) {
-            throw new Error(`Erro na requisição: ${response.status}`);
-        }
-
         const produto = await response.json();
 
-        document.querySelector("img").src = produto.thumbnail;
-        document.querySelector("img").alt = produto.title;
+        document.querySelector('img').src = produto.thumbnail;
+
+        const textos = document.querySelectorAll('.texto4');
+        textos[0].textContent = produto.title;
+        textos[1].textContent = `R$ ${(produto.price * 5.03).toFixed(2)}`;
+        textos[2].textContent = produto.rating;
+        textos[3].textContent = produto.stock;
+
+    } catch (erro) {
+        console.error(erro);
     }
-} 
+}
+
+buscarProduto(1);
