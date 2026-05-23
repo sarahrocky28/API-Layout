@@ -53,12 +53,36 @@ botaoAnterior.addEventListener("click", () => {
     }
 });
 
-const resultado = {
-    products: ["maçã", "banana", "laranja"]
+//Agora quero buscar no input pelo nome
+
+
+async function buscarPorNome(nome) {
+    try {
+        const response = await fetch(`https://dummyjson.com/products/search?q=${nome}`);
+        const produto = await response.json();
+
+        document.querySelector('img').src = produto.thumbnail;
+
+        const textos = document.querySelectorAll('.texto4');
+        textos[0].textContent = produto.title;
+        textos[1].textContent = `R$ ${(produto.price * 5.03).toFixed(2)}`;
+        textos[2].textContent = produto.rating;
+        textos[3].textContent = produto.stock;
+
+    } catch (erro) {
+        console.error(erro);
+    }
 }
 
-console.log(resultado.products(0));
+buscarPorNome(1);
 
 
+btnPesquisa.addEventListener("click", () => {
+    let id = inputPesquisa.value.trim().replace(/\s+/g, " ");
+    if (nome) {
+        nomeAtual = nome;
+        buscarProduto(nome);
+    }
+});
 
-
+let nomeAtual = 1;
