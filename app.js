@@ -24,8 +24,41 @@ const btnPesquisa = document.querySelector("#btnPesquisa")
 let inputPesquisa = document.querySelector("#inputPequisa")
 
 btnPesquisa.addEventListener("click", () => {
-    const id = inputPesquisa.value.trim().replace(/\s+/g, " ");
+    let id = inputPesquisa.value.trim().replace(/\s+/g, " ");
     if (id) {
+        idAtual = id;
         buscarProduto(id);
     }
 });
+
+//Agora estou tentando fazer com que os botoes de anterior e próximo funcionem
+
+//Esse botao é pra passar pra o próximo produto
+const botaoPróximo = document.querySelector("#botaoPróximo")
+
+let idAtual = 1;
+
+botaoPróximo.addEventListener("click", () => {
+    idAtual = idAtual + 1;
+    buscarProduto(idAtual);
+});
+
+//Esse botao é pra passar pra o produto anterior
+const botaoAnterior = document.querySelector("#botaoAnterior")
+
+botaoAnterior.addEventListener("click", () => {
+    if (idAtual > 1) {
+        idAtual = idAtual - 1;
+        buscarProduto(idAtual);
+    }
+});
+
+const resultado = {
+    products: ["maçã", "banana", "laranja"]
+}
+
+console.log(resultado.products(0));
+
+
+
+

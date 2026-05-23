@@ -76,6 +76,11 @@ img{
 .botao{
     width: 80px;
     align-items: center;
+        display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin-top: 10px;
+    padding: 15px 10px;
 }
 
 input{
@@ -95,9 +100,5 @@ button{
 }
 
 #botao{
-    display: flex;
-    justify-content: center;
-    gap: 200px;
-    margin-top: 10px;
-    padding: 15px 10px;
+
 }
