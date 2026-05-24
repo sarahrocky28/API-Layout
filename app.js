@@ -59,15 +59,20 @@ async function buscarPorNome(nome) {
     try {
         const response = await fetch(`https://dummyjson.com/products/search?q=${nome}`);
         const resultado = await response.json();
-        const produto = resultado.products[0];
 
-        document.querySelector('img').src = produto.thumbnail;
+        if (resultado.products.length === 0) {
+            document.querySelector('img').src = "./img/nao encontrado.webp";
+        } else {
+            const produto = resultado.products[0];
 
-        const textos = document.querySelectorAll('.texto4');
-        textos[0].textContent = produto.title;
-        textos[1].textContent = `R$ ${(produto.price * 5.03).toFixed(2)}`;
-        textos[2].textContent = produto.rating;
-        textos[3].textContent = produto.stock;
+            document.querySelector('img').src = produto.thumbnail;
+
+            const textos = document.querySelectorAll('.texto4');
+            textos[0].textContent = produto.title;
+            textos[1].textContent = `R$ ${(produto.price * 5.03).toFixed(2)}`;
+            textos[2].textContent = produto.rating;
+            textos[3].textContent = produto.stock;
+        }
 
     } catch (erro) {
         console.error(erro);
