@@ -18,18 +18,18 @@ async function buscarProduto(id) {
 
 buscarProduto(1);
 
-//Criando um jeito de fazer a pesquisa pelo id na barra de pesquisa
+//Criando um jeito de fazer a pesquisa pelo id na barra de pesquisa (Agora tenho outro desse que faz tudo que deveria fazer e mais)
 
 const btnPesquisa = document.querySelector("#btnPesquisa")
 let inputPesquisa = document.querySelector("#inputPequisa")
 
-btnPesquisa.addEventListener("click", () => {
-    let id = inputPesquisa.value.trim().replace(/\s+/g, " ");
-    if (id) {
-        idAtual = id;
-        buscarProduto(id);
-    }
-});
+//btnPesquisa.addEventListener("click", () => {
+//  let id = inputPesquisa.value.trim().replace(/\s+/g, " ");
+//if (id) {
+//  idAtual = id;
+//buscarProduto(id);
+//}
+//});
 
 //Agora estou tentando fazer com que os botoes de anterior e próximo funcionem
 
@@ -53,13 +53,13 @@ botaoAnterior.addEventListener("click", () => {
     }
 });
 
-//Agora quero buscar no input pelo nome
-
+//Agora quero buscar no input pelo nome do produto
 
 async function buscarPorNome(nome) {
     try {
         const response = await fetch(`https://dummyjson.com/products/search?q=${nome}`);
-        const produto = await response.json();
+        const resultado = await response.json();
+        const produto = resultado.products[0];
 
         document.querySelector('img').src = produto.thumbnail;
 
@@ -74,15 +74,15 @@ async function buscarPorNome(nome) {
     }
 }
 
-buscarPorNome(1);
-
 
 btnPesquisa.addEventListener("click", () => {
-    let id = inputPesquisa.value.trim().replace(/\s+/g, " ");
-    if (nome) {
-        nomeAtual = nome;
-        buscarProduto(nome);
+    let busca = inputPesquisa.value.trim();
+    if (busca) {
+        if (isNaN(busca)) {
+            buscarPorNome(busca);
+        } else {
+            idAtual = Number(busca);
+            buscarProduto(idAtual);
+        }
     }
 });
-
-let nomeAtual = 1;
