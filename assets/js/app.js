@@ -61,7 +61,7 @@ async function buscarPorNome(nome) {
         const resultado = await response.json();
 
         if (resultado.products.length === 0) {
-            document.querySelector('img').src = "./img/nao_encontrado.webp";
+            document.querySelector('img').src = "assets/img/nao_encontrado.webp";
         } else {
             const produto = resultado.products[0];
 
