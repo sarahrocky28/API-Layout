@@ -103,3 +103,31 @@ button{
     padding: 10px 17px;
     display: flex;
 }
+
+@media (max-width: 768px) {
+    main{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    img{
+        width: 230px;
+        height: 230px;
+    }
+}
+@media (max-width: 1024px) {
+    main{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+        img{
+        width: 230px;
+        height: 230px;
+    }
+}
