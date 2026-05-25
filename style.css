@@ -10,7 +10,7 @@ body{
     height: 100dvh;
     display: flex;
     flex-direction: column;
-    background-color: rgb(176, 214, 221);
+    background-color: rgb(238, 225, 181);
 }
 
 header{
@@ -24,7 +24,7 @@ section{
     flex-grow: 2;
 }
 h1{
-    color: rgb(168, 13, 13);
+    color: rgb(182, 115, 15);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -37,8 +37,8 @@ h1{
 
 
 #loremh3{
-    color: rgb(176, 214, 221);
-    background-color: rgb(168, 13, 13);
+    color: rgb(238, 225, 181);
+    background-color: rgb(182, 115, 15);
     padding: 7px 4px;
     margin: 6px 6px;
     border-radius: 4px;
@@ -52,8 +52,8 @@ main{
 }
 
 .texto4{
-    background-color: rgb(168, 13, 13);
-    color: rgb(255, 255, 255);
+    background-color: rgb(182, 115, 15);
+    color: rgb(238, 225, 181);
     text-align: center;
     border-radius: 5px;
     width: 350px;
@@ -70,23 +70,21 @@ main{
 img{
    
     border-radius: 10px;
-    border: 1px solid rgb(168, 13, 13);
+    border: 1px solid rgb(182, 115, 15);
 }
 
 .botao{
     width: 80px;
     align-items: center;
-        display: flex;
+    display: flex;
     justify-content: center;
-    gap: 200px;
-    margin-top: 10px;
-    padding: 15px 10px;
+
 }
 
 input{
     border-radius: 5px;
-    background-color: rgb(176, 214, 221);
-    border: 1px solid rgb(168, 13, 13);
+    background-color: rgb(238, 225, 181);
+    border: 1px solid rgb(182, 115, 15);
     padding: 7px;
     margin: 6px 6px;
 }
@@ -94,11 +92,14 @@ input{
 button{
     border-radius: 5px;
     padding: 7px;
-    background-color: rgb(168, 13, 13);
+    background-color: rgb(182, 115, 15);
     color: aliceblue;
     border: 1px solid aliceblue;
 }
 
 #botao{
-
+    gap: 200px;
+    margin-top: 10px;
+    padding: 10px 17px;
+    display: flex;
 }
