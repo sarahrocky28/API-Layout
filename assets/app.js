@@ -34,7 +34,7 @@ let inputPesquisa = document.querySelector("#inputPequisa")
 //Agora estou tentando fazer com que os botoes de anterior e próximo funcionem
 
 //Esse botao é pra passar pra o próximo produto
-const botaoPróximo = document.querySelector("#botaoPróximo")
+const botaoPróximo = document.querySelector("#botaoProximo")
 
 let idAtual = 1;
 
@@ -61,7 +61,7 @@ async function buscarPorNome(nome) {
         const resultado = await response.json();
 
         if (resultado.products.length === 0) {
-            document.querySelector('img').src = "./img/nao encontrado.webp";
+            document.querySelector('img').src = "./img/nao_encontrado.webp";
         } else {
             const produto = resultado.products[0];
 
@@ -69,7 +69,7 @@ async function buscarPorNome(nome) {
 
             const textos = document.querySelectorAll('.texto4');
             textos[0].textContent = produto.title;
-            textos[1].textContent = `R$ ${(produto.price * 5.03).toFixed(2)}`;
+            textos[1].textContent = `R$ ${(produto.price * 5.01).toFixed(2)}`;
             textos[2].textContent = produto.rating;
             textos[3].textContent = produto.stock;
         }
